@@ -1,0 +1,15 @@
+Pellegrino Conte
+Harvard Smithsonian CFA
+Working under Lynn Carlson
+6/16/15
+
+				CMD Score Calculation For YSO’s 
+
+A CMD(color magnitude diagram) score is evaluated based on the distance in color- magnitude space between a source and other plotted objects. For each young stellar object(YSO), a CMD plot is formed and it is plotted along with a separate group of stellar objects such as galaxies. A circle is then created, centered at the YSO source and having a radius such that the perimeter of the circle encapsulates 5% of the other plotted objects. The radius of this circle is considered the CMD score for this particular YSO, Object list, and CMD plot group. Each YSO was compared to four different object lists(RGB, AGB, Massive stars and galaxies) and plotted on 5 different CMDs(3.6x(3.6-5.8), 4.5x(4.5-5.8), 8.0x(4.5-8.0), 4.5x(4.5-24)). CMD scores for each YSO and object list group are obtained by obtaining the mean of the 5 scores when they are analyzed on the different CMDs. This score given to the YSO and Object group is then scaled based on how much information was provided the YSO. If all 5 CMDs could be created then it would be scaled by 5/5. If only four were produced it would be scaled by 4/5 and so on. The CMD score for each YSO is obtained by selecting the smallest score from each YSO object score. The algorithm to process this score is designed to provide the same score as the proses used in the paper "Surveying The Agents Of Galaxy Evolution In The Tidally Stripped, Low Metallicity Small Magellanic Cloud (Sage-Smc). Iii. Young Stellar Objects." ApJ The Astrophysical Journal 778.1 (2013) as to allow for comparison between the two sources. 
+
+The idea behind the code is that the closer a potential YSO is in color magnitude space to known objects such as massive stars the less likely it is that it is in fact a YSO. If a YSO has a particularly high score it would be farther away from these determined objects and thus increasing the chance that is is not these pre-determined objects. The scale is incorporated to account for potential YSOs with less data as we are incapable of providing the same certainty given to other potential YSO. 
+
+
+Bibliography
+Sewiło, M., L. R. Carlson, J. P. Seale, R. Indebetouw, M. Meixner, B. A. Whitney, T. P. Robitaille, J. M. Oliveira, K. Gordon, M. R. Meade, B. L. Babler, J. L. Hora, M. Block, K. Misselt, J. Th. Van Loon, C.-H. R. Chen, E. Churchwell, and B. Shiao. "Surveying The Agents Of Galaxy Evolution In The Tidally Stripped, Low Metallicity Small Magellanic Cloud (Sage-Smc). Iii. Young Stellar Objects." ApJ The Astrophysical Journal 778.1 (2013): 15. Web.
+
